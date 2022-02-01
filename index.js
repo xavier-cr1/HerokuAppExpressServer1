@@ -1,8 +1,8 @@
 var express = require("express");
 var app = express();
 
-app.get("/url", (req, res, next) => {
- res.json(["Tony","Lisa","Michael","Ginger","Food"]);
+app.get("/people", (req, res, next) => {
+ res.json({"Names":["Tony","Lisa","Michael","Ginger","Melody"]});
 });
 
 app.listen(3000, () => {
