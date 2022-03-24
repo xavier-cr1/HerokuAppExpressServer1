@@ -5,7 +5,7 @@ const PORT = 8080;
 const HOST = '0.0.0.0';
 
 app.get("/people", (req, res, next) => {
- res.json({"Names":["Tony","Lisa","Michael","Ginger","Melody,John"]});
+ res.json({"Names":["Tony","Lisa","Michael","Ginger","Melody,Johnny"]});
 });
 
 app.listen(PORT, HOST);
