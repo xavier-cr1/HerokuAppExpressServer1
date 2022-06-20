@@ -6,4 +6,4 @@ app.get("/people", (req, res, next) => {
 });
 
 app.listen(process.env.PORT || 8080);
-console.log(`Running on http://${HOST}:${PORT}`);
+console.log(`Running on http://${process.env.HOST}:${process.env.PORT}`);
