@@ -1,12 +1,9 @@
 var express = require("express");
 var app = express();
 
-const PORT = 8080;
-const HOST = '0.0.0.0';
-
 app.get("/people", (req, res, next) => {
- res.json({"Names":["Tony","Lisa","Michael","Ginger","Melodyd,Johnny"]});
+  res.json({ Names: ["Tony", "Lisa", "Michael", "Ginger", "Melodyd,Johnny"] });
 });
 
-app.listen(PORT, HOST);
+app.listen(process.env.PORT || 8080);
 console.log(`Running on http://${HOST}:${PORT}`);
