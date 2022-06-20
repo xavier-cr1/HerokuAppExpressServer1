@@ -1,19 +1,8 @@
-FROM node:16
+FROM risingstack/alpine:3.3-v4.2.6-1.1.3
 
-# Create app directory
-WORKDIR /usr/src/app
-
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
-
+COPY package.json package.json  
 RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
 
-# Bundle app source
-COPY . .
-
-EXPOSE 8080
-CMD [ "node", "index.js" ]
+# Add your source files
+COPY . .  
+CMD ["npm","start"]  
