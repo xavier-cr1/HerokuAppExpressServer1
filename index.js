@@ -9,7 +9,7 @@ app.get("/people", (req, res, next) => {
 });
 
 app.listen(process.env.PORT || 8080);
-if (process.env.PORT === undefined || variable === null) {
+if (process.env.PORT === undefined) {
   console.log(`Running on http://${localHOST}:${localPORT}`);
 }
 else
