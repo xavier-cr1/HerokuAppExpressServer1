@@ -22,10 +22,10 @@ app.get("/people", (req, res) => {
 app.post('/people', (req, res) => {
   const people = new People(req.body);
 
-  console.log('people', people);
-
   repo.save(people);
   res.json(people);
+
+  console.log('people', people);
 });
 
 app.listen(localPORT, localHOST);
